@@ -1,0 +1,8 @@
+img.mamagio{
+	width: 200px;
+    float: right;
+    border: 1px solid black;
+    margin-right: 40px;
+    border-radius: 80px;
+    padding: 10px;
+}
