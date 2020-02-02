@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-   <title>Mamma Gio's zuipschuit</title>
-</head>
-	<body>	
-		<body style="background-color:rgb(153, 255, 204)">
-		<script src="JS/buttons.js"></script>
-		<link rel="stylesheet" type="text/css" href="CSS/style.css">
-		<h1>Mamma Gio's zuipschuit</h1>
-		<h3>Selecteer hier uw drankjes</h2>
-			<div class="imgA">
-            <img src="img/mamagio.png" class="mamagio">
-			<h4>Biertje voor €2,30</h4>
-				<button onclick="Bier()">bestel</button>
-			<h4>Witte wijn voor €2,70</h4>
-				<button onclick="Witte_Wijn()">bestel</button>
-			<h4>Rode wijn voor €2,70</h4>
-				<button onclick="Rode_Wijn()">bestel</button>
-			<h4>Glas Vodka voor €3,40</h4>
-				<button onclick="Vodka()">bestel</button>
-			<h4>Bitterballen 5 voor €3,-</h4>
-				<button onclick="Bitterballen()">bestel</button>
+<html>
+    <head>
+        <script src="assets/js/main.js"></script>
+        <link href="assets/css/style.css" rel="stylesheet">
+        <title>Mamma Gio's zuipschuit</title>
+    </head>
 
-		<h1>Uw bestellingen</h1>
-			<p id="ab">0 Biertjes</p>
-			<p id="aww">0 Witte Wijntjes</p>
-			<p id="arw">0 Rode Wijntjes</p>
-			<p id="av">0 Vodka</p>
-			<p id="bb">0 paar Bitterballen</p>
+    <body>
+    	<div style="background-image: url('assets/img/riool.png');">
+            <div class="grid-container"> 
 
-		<button onclick="bestellen()">bestel</button>
-			<p id="prijs">Uw totaal prijs is; €0,-</p>
- </body>
+                <div class="dropdown menu">
+                <button class="dropbtn"></button>
+                <div class="dropdown-content">
+                        <a><button onclick="payOrder()">Betaal</button></a>
+                        <p id="ORDER_LIST"></p>
+                        <p id="TOTAL_PRIZE"></p>
+                        </div>
+                </div>      
+                <h1 class="itemM">Menu</h1>
+                        <div class="item1 item">
+                                <img src="assets/img/cola.jpg">
+                                <button onclick="addDrink('cola', 2.00)">cola</button>
+                                </div> 
+
+                        <div class="item2 item">
+                                <img src="assets/img/bier.jpg">
+                                <button onclick="addDrink('bier', 2.50)">Bier</button>
+                                </div> 
+
+                        <div class="item3 item">
+                                <img src="assets/img/wijn.jpg">
+                                <button onclick="addDrink('wijn', 3.00)">Wijn</button>
+                                </div> 
+                        <div class="item4 item">
+                                <img src="assets/img/bitterballen.png">
+                                <button onclick="addPortion('portie 8X', 4., 8)">8X</button>
+                                </div> 
+                        <div class="item5 item">
+                                <img src="assets/img/bitterballen.png">
+                                <button onclick="addPortion('portie 16X', 8.00, 16)">16X</button>
+                                </div> 
+            </div>        
+    </body>
 </html>
